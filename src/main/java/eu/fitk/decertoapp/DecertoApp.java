@@ -4,12 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DecertoApplication {
+public class DecertoApp {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(DecertoApplication.class, args);
-		RandomNumbersGenerator randomNumbersGenerator = new RandomNumbersGenerator();
+		SpringApplication.run(DecertoApp.class, args);
+		Generator randomNumbersGenerator = new Generator();
 		randomNumbersGenerator.performOperation();
 	}
 

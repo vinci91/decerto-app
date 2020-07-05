@@ -4,13 +4,14 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Random;
 
-public class RandomNumbersGenerator {
+public class Generator {
 
     //ilość liczb, które będziemy chcieli wylosować
     int amountOfNumbers = 2;
 
-    //wartość maksymalna przedziału liczbowego, z jakiego będziemy losować
-    int interval = 100;
+    //przedział liczb, z jakiego będziemy losować
+    int intervalStart = 0;
+    int intervalEnd = 100;
 
     Random generator = new Random();
 
@@ -20,7 +21,7 @@ public class RandomNumbersGenerator {
         LinkedList randomNumbersList = new LinkedList<>();
 
         for (int i = 0; i < amountOfNumbers; i++) {
-            randomNumbersList.add(generator.nextInt(interval));
+            randomNumbersList.add(generator.nextInt(intervalEnd - intervalStart) + intervalStart);
             System.out.println("Wartość liczby o indexie " + i + " wynosi " + randomNumbersList.get(i));
         }
 
